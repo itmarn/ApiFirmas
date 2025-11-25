@@ -1,0 +1,7 @@
+C:\Users\doescobar\Desktop\Firma Prisma\API\apiPrisma\apiPrisma\obj\Debug\net6.0\apiPrisma.csproj.AssemblyReference.cache
+C:\Users\doescobar\Desktop\Firma Prisma\API\apiPrisma\apiPrisma\obj\Debug\net6.0\rpswa.dswa.cache.json
+C:\Users\doescobar\Desktop\Firma Prisma\API\apiPrisma\apiPrisma\obj\Debug\net6.0\apiPrisma.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\doescobar\Desktop\Firma Prisma\API\apiPrisma\apiPrisma\obj\Debug\net6.0\apiPrisma.AssemblyInfoInputs.cache
+C:\Users\doescobar\Desktop\Firma Prisma\API\apiPrisma\apiPrisma\obj\Debug\net6.0\apiPrisma.AssemblyInfo.cs
+C:\Users\doescobar\Desktop\Firma Prisma\API\apiPrisma\apiPrisma\obj\Debug\net6.0\apiPrisma.csproj.CoreCompileInputs.cache
+C:\Users\doescobar\Desktop\Firma Prisma\API\apiPrisma\apiPrisma\obj\Debug\net6.0\apiPrisma.MvcApplicationPartsAssemblyInfo.cache

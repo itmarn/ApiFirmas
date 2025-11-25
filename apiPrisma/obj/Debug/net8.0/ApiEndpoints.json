@@ -1,0 +1,38 @@
+[
+  {
+    "ContainingType": "apiPrisma.Controllers.FirmaPrismaController",
+    "Method": "Firmar_documento",
+    "RelativePath": "api/FirmaPrisma/firmar_documento",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idSistema",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "strArchivo64",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "strArchivoFirmado",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "apiPrisma.Clases.Respuesta",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

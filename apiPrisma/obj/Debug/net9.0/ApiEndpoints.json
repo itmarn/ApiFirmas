@@ -1,0 +1,54 @@
+[
+  {
+    "ContainingType": "apiPrisma.Controllers.FirmaPrismaController",
+    "Method": "Firmar_documento",
+    "RelativePath": "api/v1/firma_prisma/firmar_documentos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parPeticion",
+        "Type": "apiPrisma.Clases.Peticion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "apiPrisma.Clases.Respuesta",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "apiPrisma.Controllers.FirmaPrismaController",
+    "Method": "Sol_token",
+    "RelativePath": "api/v1/firma_prisma/solicitud_tokens",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userLogin",
+        "Type": "apiPrisma.Clases.UserLogin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
