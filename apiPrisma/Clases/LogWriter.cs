@@ -6,7 +6,8 @@ namespace apiPrisma.Clases
     {
         static public void Log(string Message)
         {
-            File.AppendAllText(@"C:\Users\doescobar\Desktop\apiPrisma.log", DateTime.Now.ToString() + ": [" + Message + "]" + Environment.NewLine) ;
+            //File.AppendAllText(@"C:\Users\doescobar\Desktop\apiPrisma.log", DateTime.Now.ToString() + ": [" + Message + "]" + Environment.NewLine) ;
+            File.AppendAllText(@"apiPrisma.log", DateTime.Now.ToString() + ": [" + Message + "]" + Environment.NewLine);
         }
     }
 }
