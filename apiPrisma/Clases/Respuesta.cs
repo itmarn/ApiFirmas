@@ -4,6 +4,6 @@
     {
         public int correcto { get; set; }
         public string? mensaje { get; set; }
-        //public string? archivo { get; set; }
+        public string? archivo64 { get; set; }
     }
 }
