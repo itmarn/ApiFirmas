@@ -54,7 +54,15 @@ namespace apiPrisma.Services
                     byte[] fileBytes = Convert.FromBase64String(pet.archivo64);
                     var fileContent = new ByteArrayContent(fileBytes);
                     fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/pdf");
-                    formData.Add(fileContent, "solicitud_firma[archivo]", Path.GetFileName(pet.path_firmado));
+                    var nombre_archivo = "archivo_firmado.pdf";
+                    if (pet.path_firmado != null && pet.path_firmado != "")
+                    {
+                        if (Path.Exists(Path.GetDirectoryName(pet.path_firmado))) 
+                        {
+                            nombre_archivo = Path.GetFileName(pet.path_firmado);
+                        }
+                    }
+                    formData.Add(fileContent, "solicitud_firma[archivo]",nombre_archivo);
                     //--Archivo pdf
                     formData.Add(new StringContent(""), "solicitud_firma[url_respuesta]");
                     formData.Add(new StringContent("false"), "solicitud_firma[cerrar]");
@@ -77,11 +85,27 @@ namespace apiPrisma.Services
                         OutputJsonPris? outPris = JsonSerializer.Deserialize<OutputJsonPris>(strResp);
                         if (outPris.respuesta)
                         {
-                            File.WriteAllBytes(pet.path_firmado, Convert.FromBase64String(outPris.archivo));
+                            if (pet.path_firmado == null || pet.path_firmado == "")
+                            {
+                                resp.archivo64 = outPris.archivo;
+                                resp.mensaje = "OK - El Path para devolver el archivo no se encontro, se devuelve en base 64";
+                            }
+                            else
+                            {
+                                if (Path.Exists(Path.GetDirectoryName(pet.path_firmado)))
+                                {
+                                    File.WriteAllBytes(pet.path_firmado, Convert.FromBase64String(outPris.archivo));
+                                    resp.mensaje = "OK";
+                                } 
+                                else
+                                {
+                                    resp.archivo64 = outPris.archivo;
+                                    resp.mensaje = "OK - El Path para devolver el archivo no se encontro, se devuelve en base 64";
+                                }
+                            }
                             resp.correcto = 1;
-                            resp.mensaje = "OK";
-                            LogWriter.Log(resp.mensaje + " Archivo Firmado Correctamente: " + pet.path_firmado);
-                            //resp.archivo = outPris.archivo;
+                            //LogWriter.Log(resp.mensaje + " Archivo Firmado Correctamente: " + pet.path_firmado);
+                            LogWriter.Log(resp.mensaje + " Archivo Firmado Correctamente! ");
                         }
                         else
                         {
