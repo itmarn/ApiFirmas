@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("apiPrisma")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a0e204f4068e928fbbddbfd3735538aea3d17fab")]
 [assembly: System.Reflection.AssemblyProductAttribute("apiPrisma")]
 [assembly: System.Reflection.AssemblyTitleAttribute("apiPrisma")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
