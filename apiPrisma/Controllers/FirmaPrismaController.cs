@@ -31,11 +31,29 @@ namespace apiPrisma.Controllers
 
         [HttpPost]
         [Route("solicitud_tokens")]
-        public async Task<ActionResult<string>> Sol_token(UserLogin userLogin)
+        public async Task<ActionResult<RetToken>> Sol_token(UserLogin userLogin)
         {
-            string token = "";
-            token = await _firmaPrismaService.GetToken(userLogin);
-            return token;
+            RetToken ret = new RetToken();
+            try
+            {                
+                ret.token = await _firmaPrismaService.GetToken(userLogin);
+                ret.generado = 1;
+                ret.mensaje = "Token generado correctamente.";
+                return ret;
+            }
+            catch (Exception ex) 
+            {
+                ret.generado = 0;
+                ret.mensaje = ex.Message;
+                return ret;
+            }            
+        }
+
+        [HttpGet]
+        [Route("hola_mundo")]
+        public async Task<ActionResult<string>> Hola_mundo()
+        {
+            return "Hola, estoy vivo";
         }
 
     }

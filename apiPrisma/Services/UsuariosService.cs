@@ -23,7 +23,14 @@ namespace apiPrisma.Services
         {
             //PARCHE COMPATIBILIDAD 11G
             var listaDB = await _context.Parametros.Where(i => i.NombreUsuario.ToUpper().Trim() == NombreUsuario.ToUpper().Trim()).ToListAsync();
-            return listaDB[0];            
+            if (listaDB.Count() > 0)
+            {
+                return listaDB[0];
+            }
+            else
+            {
+                return null;
+            }                        
         }
     }
 }

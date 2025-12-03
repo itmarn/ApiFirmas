@@ -133,16 +133,21 @@ namespace apiPrisma.Services
         public async Task<string> GetToken(UserLogin userLogin)
         {
 
+            if (userLogin.usuario == null || userLogin.usuario == "" || userLogin.clave == null || userLogin.clave == "")
+            {
+                throw new Exception("ERROR DE AUTENTICACIÓN, USUARIO O PASSWORD INVALIDO!");
+            }
+
             USUARIOS user = await _usuarioService.buscar(userLogin.usuario);
 
             if (user == null)
             {
-                throw new Exception("ERROR DE AUTENTICACIÓN USUARIO INVALIDO!");
+                throw new Exception("ERROR DE AUTENTICACIÓN, USUARIO O PASSWORD INVALIDO!");
             }
 
             if (!SecretHasher.Verify(userLogin.clave, user.Password))
             {
-                throw new Exception("ERROR DE AUTENTICACIÓN PASSWORD INVALIDO!");
+                throw new Exception("ERROR DE AUTENTICACIÓN, USUARIO O PASSWORD INVALIDO!");
             }
 
             string token = GenerateToken(user);

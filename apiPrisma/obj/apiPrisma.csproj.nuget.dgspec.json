@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\doescobar\\Desktop\\Firma Prisma\\API\\apiPrisma\\apiPrisma\\apiPrisma.csproj": {}
+    "C:\\workspacemarn\\API_FIRMA\\apiPrisma\\apiPrisma.csproj": {}
   },
   "projects": {
-    "C:\\Users\\doescobar\\Desktop\\Firma Prisma\\API\\apiPrisma\\apiPrisma\\apiPrisma.csproj": {
+    "C:\\workspacemarn\\API_FIRMA\\apiPrisma\\apiPrisma.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\doescobar\\Desktop\\Firma Prisma\\API\\apiPrisma\\apiPrisma\\apiPrisma.csproj",
+        "projectUniqueName": "C:\\workspacemarn\\API_FIRMA\\apiPrisma\\apiPrisma.csproj",
         "projectName": "apiPrisma",
-        "projectPath": "C:\\Users\\doescobar\\Desktop\\Firma Prisma\\API\\apiPrisma\\apiPrisma\\apiPrisma.csproj",
+        "projectPath": "C:\\workspacemarn\\API_FIRMA\\apiPrisma\\apiPrisma.csproj",
         "packagesPath": "C:\\Users\\doescobar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\doescobar\\Desktop\\Firma Prisma\\API\\apiPrisma\\apiPrisma\\obj\\",
+        "outputPath": "C:\\workspacemarn\\API_FIRMA\\apiPrisma\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
